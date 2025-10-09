@@ -13,6 +13,10 @@ public class FIndEvenOddNumber {
         //Find the odd number in a list
         List<Integer> odd = number.stream().filter(n->n%2!=0).collect(Collectors.toList());
         System.out.println(odd);
+
+        // Count even number in a list
+        long evenCount = number.stream().filter(n->n%2==0).count();
+        System.out.println(evenCount);
     }
 
 }
