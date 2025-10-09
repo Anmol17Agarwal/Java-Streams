@@ -11,10 +11,17 @@ public class Main {
         int max = number.stream().max(Integer::compare).orElseThrow();
         System.out.println(max);
 
-
         //Find the even number in a list
         List<Integer> even = number.stream().filter(n->n%2==0).collect(Collectors.toList());
         System.out.println(even);
 
+        // Count even number in a list
+        long evenCount = number.stream().filter(n->n%2==0).count();
+        System.out.println(evenCount);
+        
+        //Covert list of strings to uppercase
+        List<String> element = List.of("anmol","agarwal");
+//        List<String> upper = element.stream().max(String::toUpperCase())
+        
     }
 }
