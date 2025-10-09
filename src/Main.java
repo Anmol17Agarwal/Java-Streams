@@ -53,7 +53,7 @@ public class Main {
         System.out.println(evenSum);
 
         //Find the square of even number in list
-        int squareSum = number.stream().filter(n->n%2==0).reduce(1,(a,b)->a*b);
+        int squareSum = number.stream().filter(n->n%2==0).map(n->n*n).reduce(1,(a,b)->a*b);
         System.out.println(squareSum);
 
         //Find max number from list
