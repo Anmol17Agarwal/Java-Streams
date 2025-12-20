@@ -1,5 +1,8 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 public class FIndEvenOddNumber {
@@ -17,6 +20,12 @@ public class FIndEvenOddNumber {
         // Count even number in a list
         long evenCount = number.stream().filter(n->n%2==0).count();
         System.out.println(evenCount);
-    }
 
+        ArrayList<Integer> listOfNumber =new ArrayList<>();
+        for (int i = 1; i <=100 ; i++) {
+            listOfNumber.add(i);
+        }
+        List<Integer> divisbleByFiveAndThree =  listOfNumber.stream().filter((num->num%3==0 && num%5==0))
+                .collect(Collectors.toList());
+    }
 }
